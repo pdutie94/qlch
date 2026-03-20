@@ -42,13 +42,15 @@ npm run build
 
 Vite da duoc cau hinh build thang vao `api/public`.
 
+Frontend chi co 1 bo file build duy nhat trong `api/public` (khong duplicate ra root).
+
 2. Truy cap ngay:
 - `http://qlch2.test/` -> Vue SPA (login/dashboard)
 - `http://qlch2.test/api/v1/modules` -> Slim API
 
 Root gateway (`index.php`) + root rewrite (`.htaccess`) se tu dong:
 - route `/api/*`, `/health` vao Slim
-- tra file static da build
+- tra file static trong `api/public`
 - fallback SPA route ve `index.html`
 
 ### Deploy 1 lenh (1 domain)
@@ -68,6 +70,7 @@ Lenh nay se:
 - tao file `release.zip` (neu may co `zip`)
 
 Khi upload hosting, chi can upload noi dung trong `.release/` (hoac giai nen `release.zip`) vao document root cua domain.
+Khong can config them server rewrite ngoai `.htaccess` da co san.
 
 ## Endpoint khoi tao
 

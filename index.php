@@ -59,7 +59,7 @@ if ($requestPath === '/health' || str_starts_with($requestPath, '/api/')) {
     exit;
 }
 
-// Serve built frontend assets from api/public.
+// Serve built frontend assets from api/public (single source, no duplicate at root).
 if ($requestPath !== '/' && $requestPath !== '') {
     $assetPath = realpath($apiPublicDir . $requestPath);
     $publicRealPath = realpath($apiPublicDir);

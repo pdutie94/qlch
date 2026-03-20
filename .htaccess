@@ -7,10 +7,5 @@ RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
 
-# Serve built frontend static files directly from api/public.
-RewriteCond %{DOCUMENT_ROOT}/api/public/assets/$1 -f
-RewriteRule ^assets/(.*)$ api/public/assets/$1 [L]
-RewriteRule ^favicon\.svg$ api/public/favicon.svg [L]
-
 # Route everything else through the unified gateway.
 RewriteRule ^ index.php [QSA,L]

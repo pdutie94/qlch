@@ -33,10 +33,8 @@ mkdir -p "$RELEASE_DIR"
 
 cp -r "$ROOT_DIR/api" "$RELEASE_DIR/api"
 cp -r "$ROOT_DIR/sql" "$RELEASE_DIR/sql"
-cp -r "$ROOT_DIR/assets" "$RELEASE_DIR/assets"
 cp "$ROOT_DIR/.htaccess" "$RELEASE_DIR/.htaccess"
 cp "$ROOT_DIR/index.php" "$RELEASE_DIR/index.php"
-cp "$ROOT_DIR/favicon.svg" "$RELEASE_DIR/favicon.svg"
 cp "$ROOT_DIR/README.md" "$RELEASE_DIR/README.md"
 
 rm -f "$RELEASE_DIR/api/.env"
