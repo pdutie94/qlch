@@ -51,6 +51,24 @@ Root gateway (`index.php`) + root rewrite (`.htaccess`) se tu dong:
 - tra file static da build
 - fallback SPA route ve `index.html`
 
+### Deploy 1 lenh (1 domain)
+
+Muc tieu: deploy nhanh len hosting voi 1 domain, khong can upload source Vue.
+
+Chay lenh:
+
+```bash
+bash scripts/deploy-package.sh
+```
+
+Lenh nay se:
+- build frontend production
+- cai Composer production cho `api` (neu co Composer)
+- tao goi deploy tai `.release/`
+- tao file `release.zip` (neu may co `zip`)
+
+Khi upload hosting, chi can upload noi dung trong `.release/` (hoac giai nen `release.zip`) vao document root cua domain.
+
 ## Endpoint khoi tao
 
 - `GET /health`: kiem tra DB, disk, migration status.
