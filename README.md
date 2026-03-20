@@ -63,6 +63,18 @@ Chay lenh:
 bash scripts/deploy-package.sh
 ```
 
+Mac dinh script chay theo che do `smart vendor`:
+- lan dau tien: dong goi ca `api/vendor`
+- neu `api/composer.lock` khong doi: bo qua `vendor` de giam dung luong upload
+- neu dependency doi: tu dong dong goi lai `vendor`
+
+Tuy chon thu cong:
+
+```bash
+bash scripts/deploy-package.sh --with-vendor
+bash scripts/deploy-package.sh --without-vendor
+```
+
 Lenh nay se:
 - build frontend production
 - cai Composer production cho `api` (neu co Composer)
