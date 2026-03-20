@@ -1,0 +1,15 @@
+DirectoryIndex index.html index.php
+
+RewriteEngine On
+
+# Route API and health requests to Slim front controller.
+RewriteCond %{REQUEST_URI} ^/(api|health)(/.*)?$ [NC]
+RewriteRule ^ index.php [QSA,L]
+
+# Serve existing files/directories directly.
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# SPA fallback for Vue Router.
+RewriteRule ^ index.html [L]

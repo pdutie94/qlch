@@ -1,0 +1,23 @@
+{
+    "name": "pdutie94/qlch-api",
+    "type": "project",
+    "require": {
+        "php": "^8.1",
+        "slim/slim": "^4.14",
+        "slim/psr7": "^1.7",
+        "illuminate/database": "^10.48",
+        "firebase/php-jwt": "^6.11",
+        "vlucas/phpdotenv": "^5.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "scripts": {
+        "serve": "php -S localhost:8080 -t public"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

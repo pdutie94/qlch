@@ -1,0 +1,4 @@
+CREATE TABLE IF NOT EXISTS migration_versions (
+    version VARCHAR(20) PRIMARY KEY,
+    applied_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
